@@ -1,5 +1,24 @@
-.avatar{
-    background-image: url("https://wallpaperaccess.com/full/935845.jpg");
-    width: 60px;
-    height: 60px;
+.profile__avatar{
+    display: flex;
+    align-items: center;
+    background-color:#040404 ;
+    border-radius: 50px;
+    padding-left:1px;
+    padding-top: 2px;
+    padding-bottom: 2spx;
+    justify-content: space-evenly;
+    max-width: 350px;
+}
+.profile__avatar >h4{
+    margin-left: 10px;
+    font-size: 18px;
+}
+.profile__avatar > .controller__icon{
+    background-color: transparent;
+    font-size: 3rem ;
+}
+.avatar__img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
 }

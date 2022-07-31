@@ -1,4 +1,50 @@
 .header{
     display: flex;
     justify-content: space-between;
+    background-color: transparent;
+    align-items: center;
+}
+.header__right{
+    background-color: transparent;
+}
+.header__right:hover .profile__avatar{
+    background-color: #7c7c7cd9;
+}
+
+
+.header__left{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.search__container{
+    background-color: white;
+    align-items: center;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 500px;
+}
+
+.search__container input{
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    padding: 13px 0;
+    border: none;
+    flex: 0.8;
+}
+.search__container input:focus{
+    outline: none;
+}
+
+.search__icon{
+    background-color: transparent;
+    fill: black !important;
+    border: none;
+    flex: 0.1
 }

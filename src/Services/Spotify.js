@@ -19,4 +19,28 @@ const scopes = [
     "user-modify-playback-state"
 ];
 
+export const getToken = () =>{
+    //console.log("hash",window.location.hash);
+    let UrlHash = window.location.hash.substring(1).split("&").reduce((initial, item)=>{
+        let parts = item.split("=");
+       // console.log("parts",parts);
+        initial[parts[0]] = decodeURIComponent(parts[1]);
+        //console.log("initial",initial);
+        return initial
+    },{})
+    // console.log("hash",window.location.hash.substring(1));// substring(1) to delete # icon
+    // console.log("hash",window.location.hash.substring(1).split("&") ) // split se tra ve mot array chua cac gia tri duoc splitted by & icon
+    // console.log("hash",window.location.hash.substring(1).split("&").reduce((initial,item)=>{
+    //     let parts = item.split("=");
+    //     console.log("parts",parts);
+    //     initial[parts[0]] = decodeURIComponent(parts[1]);
+    //     console.log("initial",initial);
+    //     return initial
+    // },{})) 
+    // after reduce se tra ve mot object voi cac propertise: {access_token, expires_in, token_type}
+    return UrlHash;
+}
+
+
 export const loginUrl = `${authenEndPoint}?client_id=${clientId}&redirect_uri=${redirectURI}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
+

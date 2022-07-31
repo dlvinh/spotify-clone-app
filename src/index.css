@@ -1,6 +1,10 @@
 *{
   margin: 0;
-  background-color: #1C1C1F
+  background-color: #1C1C1F;
+  color: white;
+}
+::-webkit-scrollbar{
+  display: none;
 }
 body {
   margin: 0;

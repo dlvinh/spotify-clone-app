@@ -1,0 +1,100 @@
+
+.sidebarOption{
+    height: 40px;
+    cursor: pointer;
+   
+    padding-top: 10px;
+    padding-left:10px;
+    display: flex;
+    background-color: transparent;
+}
+
+.sidebarOption__icon{
+    align-self: center;
+    background-color: transparent;
+}
+.sidebarOption p{
+   align-self: center;
+   color: grey;
+   padding-left: 10px;
+   background-color: transparent;
+   font-weight: 600;
+   transition: 120ms ease-in;
+}
+.sidebarOption:hover > p{
+    color: white
+}
+
+
+/* FOOTER STYLE */
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 65px;
+    width: 97%;
+    background-color: #282828;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__left{
+    background-color: transparent;
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.album_cover{
+    height: 60px;
+    width: 60px;
+    background-image: url("https://wallpaperaccess.com/full/935845.jpg");
+    object-fit: contain;
+    margin-right: 10px;
+}
+.song__info, h4,p{
+    background-color: transparent;
+}
+.song__info > h4{
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.song__info > p{
+    font-size: 12px;
+}
+
+.footer__center{
+    background-color: transparent;
+    align-items: center;
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+}
+.controller__icon{
+    background-color: transparent;
+    margin: 0 10px ;
+    transition-duration: 2s;
+}
+.controller__icon:hover{
+    transition: transform 200ms ease-in-out;
+    transform: scale(1.35);
+    fill: #1ed15e;
+}
+
+.footer__right{
+    background-color: transparent;
+    flex: 0.3;
+    align-items: center;
+}
+.footer__right div {
+    background-color: transparent;
+}
+.volumne{
+    background-color: transparent;
+}
+.footer__right * .MuiSlider-root{
+    fill: #1ed15e;
+}

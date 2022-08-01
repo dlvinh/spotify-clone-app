@@ -1,0 +1,53 @@
+.body__info,.body__container,.recentPlaylists{
+    background-color: transparent;
+}
+.body__container h2{
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.recentPlaylists{
+    margin: 40px 0;
+}
+.current__playlists{
+    background-color: transparent;
+}
+
+.playlist{
+    background-color: transparent;
+    padding: 0 
+}
+.playlist__item{
+    background-color: #22212163;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+.playlist__item:hover{
+    background-color: #7f7c7c63;
+
+}
+.playlist__item >h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.playlist__logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+
+/* ============ SHOW__INFO ========== */
+
+.shows__info{
+    
+}

@@ -17,7 +17,7 @@ export const AppState = (state=defaultState, action)=>{
             return {...state, user: userClone};
         }
         case "SAVE_PLAYLIST":{
-            console.log("SAVE_PLAYLISTS",action.data);
+          //  console.log("SAVE_PLAYLISTS",action.data);
             let playlistClone = [...state.playlists];
             playlistClone = action.data;
             return {...state,playlists:playlistClone};

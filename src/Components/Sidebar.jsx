@@ -13,7 +13,7 @@ export default function Sidebar({ spotify }) {
   useEffect(()=>{
     spotify.setAccessToken(token);
     spotify.getUserPlaylists(info.id).then((playlists)=>{
-      console.log({playlists});
+      //console.log({playlists});
       //playlist is an array 
       dispatch({
         type:"SAVE_PLAYLIST",
@@ -21,12 +21,17 @@ export default function Sidebar({ spotify }) {
       })
     })
   },[]);
+  const handleShowSearch =()=>{
+      dispatch({
+        type: "SHOW_SEARCH"
+      })
+  }
 
   return (
     <div className='sidebar'>
       <img src={process.env.PUBLIC_URL + '/assets/logos/Spotify_Logo_RGB_Green.png'} style={{ backgroundColor: 'inherit', paddingTop: "10px" }} width="100%" alt='...'></img>
       <SidebarOption title="Home" Icon={HomeIcon}></SidebarOption>
-      <SidebarOption title="Search" Icon={SearchIcon}></SidebarOption>
+      <SidebarOption onHandler={handleShowSearch} title="Search" Icon={SearchIcon}></SidebarOption>
       <SidebarOption title="Radio" Icon={SensorsIcon}></SidebarOption>
       <br />
       <strong>YOUR LIBRABY</strong>

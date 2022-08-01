@@ -5,7 +5,7 @@ import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
 import { useSelector } from 'react-redux';
 export default function Avatar() {
   const {user}  = useSelector(state=>state.AppState);
-  console.log(user);
+ // console.log(user);
   return (
     <div className='profile__avatar'>
         <img className='avatar__img' alt=".." src={user.info.images[0].url}></img>

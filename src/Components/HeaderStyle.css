@@ -16,18 +16,21 @@
     background-color: transparent;
     display: flex;
     align-items: center;
-    
+    overflow: hidden;
 }
 
 
 .search__container{
     background-color: white;
     align-items: center;
+    display: flex;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    width: 500px;
+    width: 400px;
+    transform: translateX(-130%) ;
+    transition: all 0.3s;
 }
 
 .search__container input{
@@ -46,5 +49,6 @@
     background-color: transparent;
     fill: black !important;
     border: none;
-    flex: 0.1
+    flex: 0.1;
+    cursor: pointer;
 }

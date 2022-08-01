@@ -34,7 +34,6 @@ function App() {
               data: {info:info,token:access_token},
             })
           });
-
       }
     }else{
    //   console.log(_TOKEN);

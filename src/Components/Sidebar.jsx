@@ -5,22 +5,11 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import SensorsIcon from '@mui/icons-material/Sensors';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 export default function Sidebar({ spotify }) {
-  const {token,info} =JSON.parse(localStorage.getItem("USER_LOGIN"));
   const {playlists} = useSelector(state=>state.AppState);
   const dispatch = useDispatch();
   //console.log(playlists);
-  useEffect(()=>{
-    spotify.setAccessToken(token);
-    spotify.getUserPlaylists(info.id).then((playlists)=>{
-      //console.log({playlists});
-      //playlist is an array 
-      dispatch({
-        type:"SAVE_PLAYLIST",
-        data: playlists.items
-      })
-    })
-  },[]);
   const handleShowSearch =()=>{
       dispatch({
         type: "SHOW_SEARCH"
@@ -39,7 +28,8 @@ export default function Sidebar({ spotify }) {
       <br />
       <strong>PLAYLIST</strong>
       {playlists?.map((item,index)=>{
-          return <SidebarOption key={index} title={item.name}></SidebarOption>
+          return <Link key={index} style={{textDecoration:"none"}} to={`/playlists/${item.id}`}>
+          <SidebarOption playlistId={item.id} key={index} title={item.name}></SidebarOption> </Link>
       })}
     </div>
   )

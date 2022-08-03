@@ -1,0 +1,36 @@
+.playlist_container,.playlist__header,.header_desc{
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.playlist__header{
+    display: flex;
+    align-items: end;
+}
+
+.header_logo{
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+}
+.header_desc >p:first-child{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.header_desc >p:nth-child(3){
+    margin-bottom: 10px;
+    color: gray;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.header_desc h1{
+    background-color: transparent;
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+.header_sub_desc{
+    background-color: transparent;
+}
+

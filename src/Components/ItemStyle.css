@@ -1,0 +1,43 @@
+.item__container {
+    background-color: transparent;   
+}
+
+.cart__item{
+    background-color: #181717d4;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+.cart__item:hover{
+    background-color: #292929ba;
+}
+.cart_logo{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    max-width: 400px;
+}
+.cart_logo >img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.cart_logo >img.artist{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.cart__description{
+    margin-top: 10px;
+    background-color: transparent;
+}
+.cart__description > h3{
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+

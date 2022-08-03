@@ -1,17 +1,11 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React from 'react'
 import { useSelector } from 'react-redux';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from '../../Components/Footer';
-import Playlist from '../../Components/Playlist';
-import Sidebar from '../../Components/Sidebar';
-import { getToken } from '../../Services/Spotify';
-import Body from './Body';
+import Body from '../Pages/Home/Body';
+import Footer from './Footer';
+import PlaylistTrack from './PlaylistTrack';
+import Sidebar from './Sidebar';
 
-
-
-function LandingPage({ spotify }) {
-
+export default function Playlist(spotify) {
     const { user } = useSelector(state => state.AppState);
     //console.log("user", user);
     return (
@@ -21,7 +15,7 @@ function LandingPage({ spotify }) {
                 <Sidebar spotify={spotify}></Sidebar>
                 {/* Body */}
                 
-                <Body spotify={spotify}></Body>
+                <PlaylistTrack></PlaylistTrack>
             </div>
            
                 <Footer></Footer>
@@ -30,5 +24,3 @@ function LandingPage({ spotify }) {
         </div>
     )
 }
-
-export default LandingPage

@@ -5,10 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 import { store } from './Redux/Config';
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Playlist from './Components/Playlist';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store} >
-    <App></App>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/#' element={<App></App>}></Route>
+      <Route path='/' element={<App></App>}></Route>
+      <Route path='/playlists/:playlistId' element={<Playlist></Playlist>}></Route>
+    </Routes>
+    {/* <App></App> */}
+    </BrowserRouter>
+
   </Provider>
 );
 

@@ -1,6 +1,9 @@
 .body__info,.body__container,.recentPlaylists{
     background-color: transparent;
 }
+.body__container{
+    padding: 0 30px
+}
 
 .body__container h2{
     background-color: transparent;

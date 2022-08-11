@@ -76,6 +76,7 @@
     background-color: transparent;
     margin: 0 10px ;
     transition-duration: 2s;
+    cursor: pointer;
 }
 .controller__icon:hover{
     transition: transform 200ms ease-in-out;
